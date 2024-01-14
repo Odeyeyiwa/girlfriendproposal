@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proposal</title>
+		<style type="text/css">
+			#message{
+				font-size: 50px;
+				text-align: center;
+				margin-top: -40px;
+			}
+            #NB{
+				font-size: 20px;
+				text-align: center;
+				margin-top: 120px;
+			}
+            #input{
+				font-size: 20px;
+				text-align: center;
+				margin-top: 30px;
+			}
+			#Ybuttons{
+				display: flex;
+				justify-content: center;
+				margin-top: 30px;
+			}
+            #Nbuttons{
+				display: flex;
+				justify-content: center;
+				margin-top: 30px;
+			}
+			.button{
+				background-color: #1164f4;
+				color: #ffffff;
+				border: none;
+				border-radius: 5px;
+				font-size: 18px;
+				padding: 10px 20px;
+				margin-right: 10px;
+				cursor: pointer;
+                padding: 1em 2em;   
+			}
+            .butt{
+				background-color: #1164f4;
+				color: #ffffff;
+				border: none;
+				border-radius: 5px;
+				font-size: 12px;
+				padding: 10px 20px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+			.no{
+				position: absolute;
+			}
+            button{
+
+            }
+            body{
+                background-color: #cbd9f1; 
+            }
+		</style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas">Canvas is not supported in your browser</canvas>
+        <div id="message">
+            Will you be my Girlfriend Ifeoluwakiishi???
+        </div>
+        <div id="Ybuttons">
+            <button class="button yes">
+                Yes?
+            </button>
+        </div>
+        <div id="Nbuttons">
+            <button class="button no">
+                No?
+            </button>
+        </div>
+        <div id="NB">
+            (If you considered saying No, kindly state your reasons below) 
+        </div>
+        <div id="input">
+            <Form action="mailto:aaodet@gmail.com" method="post" enctype="text/plain">
+                <input type="text" placeholder="    Kindly Enter Your Reasons here ......." size="50"><br><br>
+                <input type="submit" value="Send" class="butt">
+            </Form>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+    //     let canva = document.getElementById("canvas");
+    //     let content = canvas.getContent("2d");
+    //     // let width = window.innerWidth;
+    //     // let height = window.innerHeight;
+
+    //     let particles = [];
+    //     let colors = ["#141b41", "306bac", "6f9ceb", "98b9f2", "918ef4"];
+
+    //     //Events object 
+    //     let events ={
+    //         mouse: {
+    //             down: "mousedown", 
+    //             move: "mousemove", 
+    //             up: "mouseup"
+    //         },
+    //         touch: {
+    //             down: "touchstart" ,
+    //             move: "touchmovve",
+    //             up:"touchend",
+    //         },
+    //     };    
+        
+    //     let deviceType ="";
+    //     //Detect touch device
+    //     const isTouchDevice =()=>{
+    //         try{
+    //             document.createEvent("TouchEvent");
+    //             deviceType = "touch";
+    //             return true;
+    //         }catch (e){
+    //             deviceType = "mouse";
+    //             return false;
+    //         }
+    //     };
+
+    //     //For using request animationFrame on all browsers
+    // window. requestAnimationFrame =
+    // window. requestAnimationFrame ||
+    // window. webkitRequestAnimationFrame ||
+    // window.mozRequesetAnimationFrame ||
+    // window.oRequestAnimationFrame || 
+    // window.msRequestAnimationFrame ||
+    // function (callback) {
+    //     window.setTimeout (callback,1000/60);
+    // };
+
+    // //Randomnumber between range
+    // function startConfetti(){
+    //     let current =[];
+    //     context.fillStyle = "rgba(255,255,255,1)";
+    //     context.fillRect(0,0,width,height);
+    //     if(clicked){
+    //         createConfetti();
+    //     }
+    //     for (let i in particles){
+    //         particles[i].draw();
+    //     }
+    // }
+
+		const mdiv = document.getElementById('message');
+		const nbtn = document.querySelector('.no');
+		const ybtn = document.querySelector('.yes');
+
+		nbtn.addEventListener('click', ()=> {
+            const sw = window.innerWidth;
+			const sh = window.innerHeight;
+
+			const bw = nbtn.offsetWidth;
+			const bh = nbtn.offsetHeight;
+
+			const randx = Math.floor(Math.random() * (sw - bw));
+			const randy = Math.floor(Math.random() * (sh - bh));
+
+			nbtn.style.left = randx + 'px';
+			nbtn.style.top = randy + 'px';
+		});
+
+		ybtn.addEventListener('click', ()=> {
+			mdiv.textContent = "Well, that automatically means you are my Valentine. Also, here is a gentle reminder that 'I Love You Babe!!!'";
+		});
+	</script>
+</body>
+</html>
